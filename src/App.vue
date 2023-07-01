@@ -1,10 +1,14 @@
 <template>
   <v-app>
     <v-main>
-      <SiListDropdown 
-        v-model="items" 
-        :selectedValues="selectedValues" 
-        @update:modelValue="handleModelValueUpdate" 
+      <SiListDropdown
+        v-model="items"
+        :selectedValues="selectedValues"
+        :maxDropdowns="7"
+        :minDropdowns="2"
+        :disableAdd="false"
+        :disableAllDeleteBtns="false"
+        @update:modelValue="handleModelValueUpdate"
       />
       <!-- The selected list objects for all dropdowns can be read from outside the component, ordered
       by the active dropdown order. Show them in de demo screen that uses the component -->
